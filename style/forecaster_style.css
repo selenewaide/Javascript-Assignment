@@ -1,0 +1,120 @@
+/******************************     FONTS     ******************************/
+@import 'https://fonts.googleapis.com/css?family=Poiret+One';
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+/******************************     BODY     ******************************/
+body {
+    clear: both;
+    margin: auto;
+    background-color:#FFF;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+
+/******************************     MAIN BODY DIVS     ******************************/
+.divMainBody {
+    width:80%;
+    margin: auto;
+    padding: 0 5px 5px 5px;
+}
+
+.divContentBox1 {
+    /*border: 1px solid #ddd;*/
+    margin-bottom: 1em;
+    background-color: #FFF;
+}
+
+.weatherCheckBoxes {
+    text-align: right;
+}
+
+.clear {
+	clear: both;
+    height: 0.8em;
+}
+
+.secondHeader {
+    text-align: center;
+    margin-bottom: 1em;
+    background-color: #FFF;
+}
+
+
+/******************************     HEADER      ******************************/
+#wwHeader {
+    background-color:#FFF;
+    color:#283747;
+    text-align: center;
+    margin-top: 1em;
+    border: 0;
+    height: 4em;
+}
+
+.h1wwClass {
+    font-size: 250%;
+    font-family: 'Poiret One', cursive;
+    padding:0;
+    margin: 0;
+    border: 0;
+    height: 1em;
+}
+
+/****************************** Style for the weather data show/hide ******************************/
+#id01, .flip {
+    
+}
+
+#id01 {
+    display:none;
+}
+
+
+
+/****************************** TABLE STYLE **************************/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #85929E;
+    color: white;
+}
+
+
+
+/****************************** Google Map **************************/
+      #map {
+        height: 400px;
+
+      }
+
+/****************************** Summary cell text linking to Detail Table **************************/
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    color: darkblue;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active {
+    text-decoration: underline;
+}
+      
+
+

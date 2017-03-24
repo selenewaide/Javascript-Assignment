@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Forecaster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="text/javascript" src="scripts/scriptDaily.js"></script>
+    <script type="text/javascript" src="scripts/scriptDetailed.js"></script>
+    <script type="text/javascript" src="scripts/scriptMap.js"></script>
+    <link rel="stylesheet" href="style/forecaster_style.css" type="text/css" />
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-RQTdlhzRiy56n3lYamt1VekvLk5tJFg&callback=initMap"
+    async defer></script>
+    
+</head>
+<body>
+<!--    HEADER       -->
+    <header>
+            <div id="wwHeader">
+                <h1 class="h1wwClass">Dublin Weather Report</h1>
+            </div>
+    </header>
+
+
+<!--    CONTENTS OF BODY       -->
+    
+<div class="divMainBody"> 
+    
+     <div> 
+         <h4 class="secondHeader">
+         Welcome to Dublin Weather Report. Will you need an umbrella today? To find out, take a look at our summary forecast for the next five days. You can also drill down into each day for a more detailed forecast which is displayed in three hour blocks. Please see details below.</h4>
+    </div>
+    
+    <div id="map">Map Here</div>
+    
+    <div class="divContentBox1">  
+        <h2>Summary Forecast</h2>
+        <p style="display:inline;font-style: italic;">  Select the number of days from the drop down list below to view a summary forecast. You can also click on the contents of any cell in the table generated to take you to that day's Detailed Forecast in the section below.</p>
+        <div class="clear"></div>
+       
+        <!-- Select days & submit form -->    
+            <form>
+                Select the number of days:
+                <select id="userSelect1">
+                    <option value="1">One Day</option>
+                    <option value="2">Two Days</option>
+                    <option value="3">Three Days</option>
+                    <option value="4">Four Days</option>
+                    <option value="5">Five Days</option>
+                </select>
+
+                <input type="button" onclick="getOption()" value="Submit">
+                
+                <div class="weatherCheckBoxes">
+                    Pressure: <input type="checkbox" id="pressureCheck1" onclick="select_weather_cols('colPressureDaily')" checked>
+                    Humidity: <input type="checkbox" id="humidityCheck1" onclick="select_weather_cols('colHumidityDaily')" checked>
+                    Wind Speed: <input type="checkbox" id="windCheck1" onclick="select_weather_cols('colWindDaily')" checked>
+                </div>
+                
+            </form>
+        <!-- Select days & submit form END --> 
+
+        <!-- Select Button --> 
+        <p id="selectedOutput1" class="flip" style="display:inline">1 </p><p style="display:inline;">  Day Forecast</p>
+       <div class="clear"></div>
+        <!-- Select Button END -->    
+
+        <!-- Display Weather Info  -->
+        <div id="id01">...</div>
+        <!-- Display Weather Info END --> 
+    </div>
+    
+    <div class="divContentBox1">   
+        <hr>
+        <h2>Detailed Forecast</h2>
+        <p style="display:inline;font-style: italic;">Select the number of days from the Summary Forecast drop down list above, and click on the contents of any cell in the table generated, to display the detailed forecast for that day here.</p>
+
+       <div class="clear"></div>
+
+        <!-- Display Weather Info  -->
+        <div id="id02"></div>
+        <!-- Display Weather Info END --> 
+        
+    </div>
+    
+</div>
+     
+</body>
+</html>
+
+
